@@ -1,0 +1,11 @@
+package com.algaworks.algalog.api.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+public class ClientController {
+	@GetMapping("/clientes")
+	public String listar() {
+		return "Ola";	
+	}
+}
