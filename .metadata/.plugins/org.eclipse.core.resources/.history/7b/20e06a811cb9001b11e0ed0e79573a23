@@ -1,0 +1,3 @@
+NotBlank= é obrigatório
+Size= no minímo {2} e o no maxímo {1} caracter
+Email=informe um email válido
