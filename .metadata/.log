@@ -804,3 +804,33 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.sort(java.util.Com
 	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:15.964
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:15.969
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:15.970
+!MESSAGE buffering callback sts4.classpath.ADyKqxBp algalog-api false 98
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:15.971
+!MESSAGE executing callback sts4.classpath.ADyKqxBp 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:16.026
+!MESSAGE executing callback sts4.classpath.ADyKqxBp SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:38.742
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:38.744
+!MESSAGE classpath=98 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:38.745
+!MESSAGE buffering callback sts4.classpath.ADyKqxBp algalog-api false 98
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:38.745
+!MESSAGE executing callback sts4.classpath.ADyKqxBp 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-19 22:28:38.763
+!MESSAGE executing callback sts4.classpath.ADyKqxBp SUCCESS [done]
