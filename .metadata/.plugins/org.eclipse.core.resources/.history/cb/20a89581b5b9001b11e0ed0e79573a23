@@ -13,11 +13,8 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-
-import com.algaworks.algalog.domain.exception.BussinesException;
 
 import lombok.AllArgsConstructor;
 
@@ -41,16 +38,5 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 		problems.setTitle("One or more fields are invalid");
 		problems.setFields(fields);
 		return handleExceptionInternal(ex, problems, headers, status, request);
-	}
-	@ExceptionHandler(BussinesException.class)
-	public ResponseEntity<Object> handleBussines(BussinesException ex, WebRequest request){
-		HttpStatus status = HttpStatus.BAD_REQUEST;
-		
-		Problems problems = new Problems();
-		problems.setStatus(status.value());
-		problems.setTime(LocalDateTime.now());
-		problems.setTitle(ex.getMessage());
-		
-		return handleExceptionInternal(ex, problems, new HttpHeaders(), status, request);
 	}
 }

@@ -55,12 +55,19 @@ public class ClientController {
 			return ResponseEntity.notFound().build();
 		}
 		
-		client.setId(clientId);
-		client = clientService.salvar(client);
+		client.setId(clienteId);
+		client = ClientService.salvar(client);
 		
 		return ResponseEntity.ok(client);
 	}
-
+//	public ResponseEntity<Client> update(@PathVariable Long clientId,@Valid @RequestBody Client client){
+//		if(!clientRepository.existsById(clientId)) {
+//			return ResponseEntity.notFound().build();
+//		}
+//		client.setId(clientId);
+//		client = clientService.salvar(client);
+//		return ResponseEntity.ok(client);
+//	}
 	@DeleteMapping("/{clientId}")
 	public ResponseEntity<Void> delete(@PathVariable Long clientId){
 		if(!clientRepository.existsById(clientId)) {
