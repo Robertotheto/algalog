@@ -1,6 +1,6 @@
 package com.algaworks.algalog.api.exceptionhandler;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +37,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 		}
 		Problems problems = new Problems();
 		problems.setStatus(status.value());
-		problems.setTime(OffsetDateTime.now());
+		problems.setTime(LocalDateTime.now());
 		problems.setTitle("One or more fields are invalid");
 		problems.setFields(fields);
 		return handleExceptionInternal(ex, problems, headers, status, request);
@@ -48,7 +48,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 		
 		Problems problems = new Problems();
 		problems.setStatus(status.value());
-		problems.setTime(OffsetDateTime.now());
+		problems.setTime(LocalDateTime.now());
 		problems.setTitle(ex.getMessage());
 		
 		return handleExceptionInternal(ex, problems, new HttpHeaders(), status, request);
