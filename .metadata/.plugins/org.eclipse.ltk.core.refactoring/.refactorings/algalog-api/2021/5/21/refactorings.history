@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.algaworks.algalog.domain.repository.DliveryRepository&apos; to &apos;DeliveryRepository&apos;&#x0A;- Original project: &apos;algalog-api&apos;&#x0A;- Original element: &apos;com.algaworks.algalog.domain.repository.DliveryRepository&apos;&#x0A;- Renamed element: &apos;com.algaworks.algalog.domain.repository.DeliveryRepository&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DliveryRepository&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.algaworks.algalog.domain.repository{DliveryRepository.java[DliveryRepository" matchStrategy="1" name="DeliveryRepository" qualified="false" references="true" similarDeclarations="false" stamp="1621551684372" textual="false" version="1.0"/>
+</session>

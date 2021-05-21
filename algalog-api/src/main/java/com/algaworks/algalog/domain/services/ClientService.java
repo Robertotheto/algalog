@@ -15,6 +15,11 @@ public class ClientService {
 	
 	private ClientRepository clientRepository;
 	
+	public Client buscar(Long clientId) {
+		return  clientRepository.findById(clientId)
+				.orElseThrow(() -> new BussinesException("Client not found"));
+	}
+	
 	@Transactional
 	public Client salvar(Client client) {
 		boolean EmailUse  = clientRepository.findByEmail(client.getEmail())
