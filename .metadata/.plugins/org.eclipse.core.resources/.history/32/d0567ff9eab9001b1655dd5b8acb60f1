@@ -41,8 +41,6 @@ public class Delivery {
 	@ManyToOne
 	private Client client;
 	
-	@Valid
-	@NotNull
 	@Embedded
 	private Recipient recipient;
 	
