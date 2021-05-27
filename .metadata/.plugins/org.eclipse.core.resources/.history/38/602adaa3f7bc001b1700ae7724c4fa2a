@@ -1,0 +1,15 @@
+package com.algaworks.algalog.domain.services;
+
+import org.springframework.stereotype.Service;
+
+import com.algaworks.algalog.domain.models.Occurrence;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@Service
+public class OccurenceService {
+	public Occurrence registrar() {
+		
+	}
+}

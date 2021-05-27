@@ -18,6 +18,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import com.algaworks.algalog.domain.exception.BussinesException;
+import com.algaworks.algalog.domain.exception.EntityNotMeetException;
 
 import lombok.AllArgsConstructor;
 
@@ -45,6 +46,17 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 	@ExceptionHandler(BussinesException.class)
 	public ResponseEntity<Object> handleBussines(BussinesException ex, WebRequest request){
 		HttpStatus status = HttpStatus.BAD_REQUEST;
+		
+		Problems problems = new Problems();
+		problems.setStatus(status.value());
+		problems.setTime(OffsetDateTime.now());
+		problems.setTitle(ex.getMessage());
+		
+		return handleExceptionInternal(ex, problems, new HttpHeaders(), status, request);
+	}
+	@ExceptionHandler(EntityNotMeetException.class)
+	public ResponseEntity<Object> handleEntityNotMeetException(EntityNotMeetException ex, WebRequest request){
+		HttpStatus status = HttpStatus.NOT_FOUND;
 		
 		Problems problems = new Problems();
 		problems.setStatus(status.value());
